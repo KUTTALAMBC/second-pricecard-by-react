@@ -1,32 +1,144 @@
-import logo from './logo.svg';
-import './App.css';
-import Pricing from './Pricing';
-// import './Pricing.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App () {
-return(
-  <div class="pricing1 py-5 bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-8 text-center">
-        <h3 class="mt-3 font-weight-medium mb-1">Pricing to make your Work Effective</h3>
-        <h6 class="subtitle">We offer 100% satisafaction and Money back Guarantee</h6>
-        <div class="switcher-box mt-4 d-flex align-items-center justify-content-center">
-          <span class="font-14 font-weight-medium">MONTHLY</span>
-          <div class="onoffswitch position-relative mx-2">
-            <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox d-none" id="myonoffswitch1">
-            <label class="onoffswitch-label d-block overflow-hidden" for="myonoffswitch1">
-							<span class="onoffswitch-inner d-block"></span>
-							<span class="onoffswitch-switch d-block bg-white position-absolute"></span>
-						</label>
+import Heading from "./Heading";
+
+
+function App() {
+  let types = [
+    {
+      plan: "BASIC",
+      members: "For Team of 3-5 Members",
+      amountmonth: "28",
+      amountyear: "240",
+      save: "20",
+      color:"btn btn-success-gradiant btn-md text-white btn-block",
+      fed :[
+          {
+            a:"Perfect of Small Team",
+        },
+              
+        { 
+           a:"Unlimited Invoices",
+        },
+        {
+            a:"Perfect of Small Team",
+         },
+         {
+            a :"",
+         },
+        {
+           a:"",
+         },
+        
+          
+      ]
+    },
+    {
+      pop :"POPULAR"  ,
+      plan: "INTERMEDIATE",
+      members: "For Team of 5-10 Members",
+      amountmonth: "39",
+      amountyear: "400",
+      save: "30",
+      color :"btn btn-danger-gradiant btn-md text-white btn-block",
+      fed :[
+        
+            {
+                a:"Perfect of Small Team",
+            },
+            {
+                
+            a:"Unlimited Invoices",
+            },
+            {
+                
+              a:"Perfect of Small Team",
+            },
+            {
+                
+              a:"Team Management",
+            },
+            {
+                a:"",
+            },     
+    ]
+    },
+    {
+      plan: "HIGH CLASS",
+      members: "For Team of 10-25 Members",
+      amountmonth: "58",
+      amountyear: "600",
+      save: "50",
+      color:"btn btn-success-gradiant btn-md text-white btn-block",
+      fed :[
+        
+            {
+                a:"Perfect of Small Team",
+            },
+            {
+                a:"Unlimited Invoices",
+            },
+            {
+                a:"Perfect of Small Team",
+            },
+            {
+                a:"Team Management",
+            },
+            {
+                a:"Time Tracking",
+            },
+           
+            
+            
+            
+        
+        
+    ]
+    },
+    {
+      plan: "SUPREME",
+      members: "For Team of 25-100 Members",
+      amountmonth: "98",
+      amountyear: "1000",
+      save: "80",
+      color:"btn btn-success-gradiant btn-md text-white btn-block",
+      fed :[
+        
+        {
+            a:"Perfect of Small Team",
+        },
+        {
+            a:"Unlimited Invoices",
+        },
+        {
+            a:"Perfect of Small Team",
+        },
+        {
+            a:"Team Management",
+        },
+        {
+            a:"Time Tracking",
+        },
+         
+    ]
+    },
+  ];
+
+  return (
+    <div class="pricing1 py-5 bg-light">
+      <div class="container">
+      <div class="row mt-5">
+        
+              {
+                  types.map((pro) => <Heading data={pro}></Heading>)    
+              }
+           
           </div>
-          <span class="font-14 font-weight-medium">YEARLY</span>
         </div>
-      </div>
-    </div>
-)
-  
-  
+        </div>
+     
+  );
 }
 
 export default App;
